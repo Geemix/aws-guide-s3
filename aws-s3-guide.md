@@ -198,4 +198,4 @@ cket_name>'
 
   8. Run python manage.py collectstatic and you should be all setup.
 
-  ## thank you -- copied from justin mitchel coding for entrepreneurs
+  ## thank you -- copied from justin mitchel coding for entrepreneurs + few modificcations of my own
