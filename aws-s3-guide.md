@@ -171,4 +171,4 @@
 
   8. Run python manage.py collectstatic and you should be all setup.
 
-  ## thank you -- copied from justin mitchel coding for entrepreneurs + few modificcations of my own
+  ## thank you -- copied from justin mitchel coding for entrepreneurs + few modifications of my own
