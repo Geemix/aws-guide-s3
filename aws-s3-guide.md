@@ -46,36 +46,20 @@
     ## Code To Paste In There
     ```javascript
     {
-        "Version": "2012-10-17",
-        "Statement": [
-            {
-                "Effect": "Allow",
-                "Action": [
-                    "s3:ListAllMyBuckets"
-                ],
-                "Resource": "arn:aws:s3:::*"
-            },
-            {
-                "Effect": "Allow",
-                "Action": [
-                    "s3:ListBucket",
-                    "s3:GetBucketLocation",
-                    "s3:ListBucketMultipartUploads",
-                    "s3:ListBucketVersions"
-                ],
-                "Resource": "arn:aws:s3:::<your_bucket_name>"
-            },
-            {
-                "Effect": "Allow",
-                "Action": [
-                      "s3:*Object*",
-                    "s3:ListMultipartUploadParts",
-                    "s3:AbortMultipartUpload"
-                ],
-                "Resource": "arn:aws:s3:::<your_bucket_name>/*"
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "s3:*",
+            "Resource": "arn:aws:s3:::shakara2/*",
+            "Condition": {
+                "StringEquals": {
+                    "s3:signatureversion": "AWS4-HMAC-SHA256"
+                }
             }
-        ]
-    }
+        }
+    ]
+}
     ```
     ## 
     A. The Actions that we choose to set are based on what we want this user to be able to do. The line "s3:*Object*", will handle a lot of our permissions for handling objects for the specified bucket within the Recourse Value.
